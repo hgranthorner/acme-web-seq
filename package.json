@@ -4,13 +4,17 @@
   "description": "To Do:",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db/seed.js && nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hgranthorner/acme-web-seq.git"
   },
   "keywords": [],
+  "engines": {
+    "node": "10.x"
+  },
   "author": "Grant Horner",
   "license": "ISC",
   "bugs": {

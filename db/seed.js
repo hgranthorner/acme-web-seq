@@ -1,5 +1,5 @@
 const { Page, Content } = require('./models/index')
-const initDb = require('./index')
+const { initDb } = require('./index')
 
 initDb(true)
   .then(() => {
