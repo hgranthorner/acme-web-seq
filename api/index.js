@@ -1,8 +1,11 @@
 const express = require('express')
 const { models } = require('../db')
 const { header, body, footer } = require('../views')
+const syncAndSeed = require('../db/seed')
 const morgan = require('morgan')
 const app = express()
+
+syncAndSeed()
 
 app.use(morgan('dev'))
 
