@@ -1,3 +1,12 @@
-const app = require('./api')
+const app = require('./api/index')
+const { initDb } = require('./db')
+const port = process.env.PORT || 3000
 
-app.listen(process.env.PORT || 3000, () => console.log('Server is listening on 1337...'))
+initDb()
+  .then(() => {
+    app.listen(port, () => console.log(`Server is listening on ${port}...`))
+  })
+  .catch(e => {
+    console.error(e)
+    process.exit(1)
+  })

@@ -13,4 +13,10 @@ const initDb = (force = false) => {
     .catch(() => console.log('initDb failed'))
 }
 
-module.exports = initDb
+module.exports = {
+  initDb,
+  models: {
+    Page,
+    Content
+  }
+}
