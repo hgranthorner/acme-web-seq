@@ -72,6 +72,7 @@ function syncAndSeed() {
       console.log('Db seeded.')
     })
     .catch(e => {
+      console.log('Error when initializing db')
       console.error(e)
       process.exit(1)
     })
