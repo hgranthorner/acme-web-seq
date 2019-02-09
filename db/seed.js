@@ -69,7 +69,6 @@ initDb(true)
   })
   .then(() => {
     console.log('Db seeded.')
-    process.exit(0)
   })
   .catch(e => {
     console.error(e)
