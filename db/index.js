@@ -1,5 +1,5 @@
 const db = require('./db')
-const { Page, Content } = require('./models')
+const { Page, Content } = require('./models/index')
 
 const initDb = (force = false) => {
   return db
@@ -13,4 +13,4 @@ const initDb = (force = false) => {
     .catch(() => console.log('initDb failed'))
 }
 
-process.exit(0)
+module.exports = initDb

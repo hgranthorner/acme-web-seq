@@ -1,4 +1,4 @@
-const initDb = require('./db')
+const initDb = require('./db/index')
 
 initDb()
   .then(() => {
